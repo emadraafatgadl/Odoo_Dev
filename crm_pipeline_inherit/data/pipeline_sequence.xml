@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+
+   <record id="sequence_pipeline_crm" model="ir.sequence">
+   <field name="name">Pipeline</field>
+   <field name="code">crm.lead.seq</field>
+   <field name="active">TRUE</field>
+   <field name="prefix">Bell/OP/%(year)s/</field>
+   <field name="padding">4</field>
+   <field name="number_next">1</field>
+   <field name="number_increment">1</field>
+</record>
+    </data>
+</odoo>
