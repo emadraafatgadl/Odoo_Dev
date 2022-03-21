@@ -98,7 +98,7 @@ class AccountPartnerLedgerReportInh(models.AbstractModel):
             {'name': aml['journal_code']},
             {'name': aml['account_code']},
             {'name': self._format_aml_name(aml['name'], aml['ref'], aml['move_name'])},
-            {'name': aml['customer_po_no']},
+            {'name': aml['customer_po_no'] or ''},
             {'name': date_maturity or '', 'class': 'date'},
             {'name': aml['full_rec_name'] or ''},
             {'name': self.format_value(cumulated_init_balance), 'class': 'number'},
@@ -139,7 +139,7 @@ class AccountPartnerLedgerReportInh(models.AbstractModel):
         columns.append({'name': self.format_value(balance), 'class': 'number'})
 
         return {
-            'id': 'partner_%s' % partner.id,
+            'id': 'partner_%s' % partner.id or False,
             'name': partner.name[:128],
             'columns': columns,
             'level': 2,
