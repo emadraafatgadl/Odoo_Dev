@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            string="Invoice Report"
+            id="invoice_inherit_report_pdf"
+            model="account.move"
+            report_type="qweb-pdf"
+            name="academic_details.invoice_report_inherit_action"
+            file="academic_details.invoice_report_inherit_action"
+            print_report_name="'Invoice Report'"
+        />
+	</data>
+</odoo>

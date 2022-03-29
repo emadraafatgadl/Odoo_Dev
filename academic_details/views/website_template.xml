@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+		 <template id="assets_backend" name="lead form assets" inherit_id="web.assets_backend">
+			<xpath expr="." position="inside">
+				<link rel="stylesheet" type="text/css" href="/ppts_crm/static/src/css/pptd_crm_style.css"/>
+			</xpath>
+		</template>
+
+		<template id="icons_header" name="lead icons" inherit_id="website.layout">
+			<xpath expr="//header//ul[@id='top_menu']" position="inside">
+<!--				<link rel="stylesheet"  href="/ppts_crm/static/src/css/pptd_crm_style.css"/>-->
+						<a href="/lead/" class="nav-icon">
+							 <i class="topright"/>
+							 <sup t-attf-class="crm_lead o_animate_blink badge badge-primary"><t t-esc='lead'/></sup>
+						</a>
+			</xpath>
+		</template>
+
+		<template id="header" inherit_id="website.layout" name="CRM Lead Products">
+			<xpath expr="//header//ul[@id='top_menu']" position="replace">
+				<link rel="stylesheet" type="text/css" href="/ppts_crm/static/src/css/pptd_crm_style.css"/>
+				<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"/>
+
+						<a href="/lead/" class="nav-link">
+							<i class="fa fa-primary"/>
+							Products <sup t-attf-class="crm_lead o_animate_blink badge badge-primary"><t t-esc='lead'/></sup>
+						</a>
+						<a href="/lead/" class="nav-link">
+							<i class="fa fa-primary"/>
+							Home Stories <sup t-attf-class="crm_lead o_animate_blink badge badge-primary"><t t-esc='lead'/></sup>
+						</a>
+						<a href="/lead/" class="nav-link">
+							<i class="fa fa-primary"/>
+							Colour and material <sup t-attf-class="crm_lead o_animate_blink badge badge-primary"><t t-esc='lead'/></sup>
+						</a>
+						<a href="/lead/" class="nav-link">
+							<i class="fa fa-primary"/>
+							Design <sup t-attf-class="crm_lead o_animate_blink badge badge-primary"><t t-esc='lead'/></sup>
+						</a>
+						<a href="/lead/" class="nav-link">
+							<i class="fa fa-primary"/>
+							News <sup t-attf-class="crm_lead o_animate_blink badge badge-primary"><t t-esc='lead'/></sup>
+						</a>
+						<ul>
+						<li>
+							<a>
+								<div class="topright">
+									<i class="fa fa-volume-control-phone"/>
+									<i class="fa fa-heart" />
+									<i class="fa fa-map-marker"/>
+									<i class="fa fa-globe"/>
+									<div class="icon">
+										<i class="fa fa-search"/>
+									</div>
+								</div>
+							</a>
+						</li>
+						</ul>
+			</xpath>
+		</template>
+
+
+		<record id="menu_crm_lead" model="website.menu">
+			<field name="name">Lead</field>
+			<field name="url">/Lead</field>
+			<field name="parent_id" ref="website.main_menu"/>
+			<field name="sequence" type="int">5</field>
+		</record>
+		<record id="action_open_crm_lead_menu" model="ir.actions.act_url">
+			<field name="name">Lead Form</field>
+			<field name="target">self</field>
+			<field name="url">/lead_form</field>
+		</record>
+		<record id="base.open_menu" model="ir.actions.todo">
+			<field name="action_id" ref="action_open_crm_lead_menu"/>
+			<field name="state">open</field>
+		</record>
+
+		<template id="confirmation">
+			<t t-call="website.layout">
+				<div id="wrap" class="oe_structure oe_empty">
+					<section class="mt16 mb128">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 text-center mt16 mb32">
+									<h2>
+										<span style="color:#008000;">
+											<strong>Lead Saved</strong>
+										</span>
+									</h2>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</t>
+		</template>
+
+
+		<template id="create_lead" name="Create Lead">
+			<t t-call="website.layout">
+				<div id="wrap" class="oe_structure oe_empty oe_website_appoinment">
+					<section class="ehtml_form container oe_dark para_large section-title" id="ehtml_form">
+
+						<form class="form-horizontal mt32 form_size" id="ticketform" action="/lead/save/" method="post" enctype="multipart/form-data">
+							<h1 style="text-align: center;padding-bottom:30px;">Lead Information</h1>
+							<div class="oe_website_appoinment">
+								<div class="form-group row">
+									<label for="company" class="col-sm-3 col-form-label" style="font-weight: normal;">Company
+										<span class="title-txt">*</span>
+									</label>
+									<div class="col-sm-9">
+										<input class="form-control" required="required" id="company_name" name="company_name" type="text" t-att-value="company_name"/>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label" for="x_propect_first_name" style="font-weight: normal;">Name
+										<span class="title-txt">*</span>
+									</label>
+									<div class="col-sm-9">
+										<input class="form-control" id="x_propect_first_name" style="width:50%;float: left;" name="x_propect_first_name" required="required" type="text" placeholder="First name" t-att-value="x_propect_first_name"/>
+										<input class="form-control" id="x_propect_second_name" style="width:50%;" name="x_propect_second_name" type="text" placeholder="Last name" t-att-value="x_propect_second_name"/>
+									</div>
+								</div>
+
+								 <div class="form-group row">
+									<label for="email_id" class="col-sm-3 col-form-label" style="font-weight: normal;">Email
+										<span class="title-txt">*</span>
+									</label>
+									<div class="col-sm-9">
+										<input class="form-control" id="email_from" required="required" name="email_from" type="email" t-att-value="email_from"/>
+									</div>
+									<div class="oe_email_status">
+
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="client_emailid" class="col-sm-3 col-form-label" style="font-weight: normal;">Partner Email
+										<span class="title-txt">*</span>
+									</label>
+									<div class="col-sm-9">
+										<input class="form-control" id="partner_id" required="required" name="partner_id" type="email" t-att-value="partner_id"/>
+									</div>
+									<div class="oe_email_status">
+
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="phone_no" class="col-sm-3 col-form-label" style="font-weight: normal;">Phone Number
+									</label>
+									<div class="col-sm-9">
+										<input class="form-control" id="phoneNumber" name="phoneNumber" type="tel" t-att-value="phoneNumber"/>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="message" class="col-sm-3 col-form-label" style="font-weight: normal;">Message
+										<span class="title-txt">*</span>
+									</label>
+									<div class="col-sm-9">
+										<textarea rows="10" cols="50" class="form-control" required="required" id="message" name="message" t-att-value="message"/>
+									</div>
+								</div>
+							</div>
+
+							<div class="butn" style="text-align:center;">
+								<input class="btn btn-primary" value="Reset" type="reset"/>
+								<button type="btnsubmit" id="submit_btn" class="btn btn-primary">Submit</button>
+							</div>
+
+						</form>
+
+					</section>
+				</div>
+			</t>
+		</template>
+
+	</odoo>

@@ -1,0 +1,109 @@
+.title-txt{
+
+ background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding-top: 5px;
+  margin: 20px;
+ position: relative;
+ top: 10px;
+ left: 150px;
+font-size: 18px;
+}
+
+.h4 {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 2px;
+  font-size:20px;
+  position: relative;
+  left: 20px;
+}
+
+.dropdown-item{
+  line-height: 30px;
+}
+
+.line-ht{
+  line-height: 10px;
+
+}
+.right12{
+  position: absolute;
+  top: 5px;
+  left: 250px;
+}
+.h3 {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 2px;
+  font-size:20px;
+  position: relative;
+  left: 20px;
+
+}
+
+.left-move{
+position: relative;
+left: 100px;
+font-family: "Trirong", serif;
+}
+
+.h5{
+width:100%
+}
+
+.move-left{
+ position: relative;
+ left: 80px;
+}
+
+.move-left2{
+ position: relative;
+ left: 160px;
+}
+
+.move-left3{
+ position: relative;
+ left: 40px;
+}
+
+th {
+  background-color: #000000;
+  color: white;
+}
+.topup {
+ position: absolute;
+ top: 40px;
+}
+.table, td, th {
+  border: 1px solid black;
+}
+
+table {
+ width: 100%;
+ padding: 15px;
+}
+h1{
+font-size:30px;
+}
+
+.textok{
+position:absolute;
+right:25px;
+}
+.section-title{
+margin-top:30px;
+margin-bottom:30px;
+border-radius:5px;
+}
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 12px;
+
+}
+
+

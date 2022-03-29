@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="external_layout_header_inherit_cr" inherit_id="web.external_layout_background">
+        <xpath expr="//img[@t-if='company.logo']" position="replace">
+            <div>
+                <img src="data:image/jpeg;base64,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"/>
+            </div>
+        </xpath>
+
+        <xpath expr="//div[@class='float-left company_address']" position="replace">
+            <link rel="stylesheet" type="text/css" href="/academic_details/static/src/css/website_style.css"/>
+            <div class="right12">
+                <p class="line-ht">GREEN SOUCE JANITORIAL</p>
+                <p class="line-ht">2625 Middlefield Rd #664</p>
+                <p class="line-ht">Palo Alto, California 94306 </p>
+                <p class="line-ht">accounting@greensourcejanitorial.com</p>
+                <p class="line-ht">(650)488-8100</p>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="invoice_report_inherit" inherit_id="account.report_invoice_document">
+<!--        <t t-call="academic_details.external_layout_header_inherit_cr"/>-->
+
+        <xpath expr="//address[@t-field='o.partner_id']" position="before">
+<!--            <t t-call="academic_details.external_layout_header_inherit_cr"/>-->
+            <link rel="stylesheet" type="text/css" href="/academic_details/static/src/css/website_style.css"/>
+            <div class=".topup">
+            <h1>Jul 2021-Invoice</h1>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Invoice#</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><p class="m-0" t-field="o.invoice_date"/></td>
+                    <td><p class="m-0" t-field="o.name"/></td>
+                  </tr>
+                </tbody>
+            </table>
+            </div>
+        </xpath>
+
+        <xpath expr="//address[@t-field='o.partner_id']" position="replace">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>Ship To</th>
+                    <th>Bill To</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><p class="m-0" t-field="o.partner_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' /></td>
+                    <td><p class="m-0" t-field="o.partner_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' /></td>
+                  </tr>
+                </tbody>
+              </table>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>Terms</th>
+                    <th>PO#</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span t-field="o.invoice_payment_term_id.note"/></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </xpath>
+        <xpath expr="//div[@class='page']" position="replace">
+          <t t-set="lines" t-value="o.invoice_line_ids.sorted(key=lambda l: (-l.sequence, l.date, l.move_name, -l.id), reverse=True)"/>
+
+            <t t-foreach="lines" t-as="line">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>Quantity</th>
+                    <th>Item description</th>
+                    <th>Rate</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span t-field="line.quantity"/></td>
+                    <td name="account_invoice_line_name"><span t-field="line.name" t-options="{'widget': 'text'}"/></td>
+                    <td><span class="text-nowrap" t-field="line.price_unit"/></td>
+                    <td><span class="text-nowrap" t-field="line.price_total"/></td>
+                  </tr>
+                    <td></td>
+                    <td></td>
+                    <td><dt>Total</dt></td>
+                    <td><span class="text-nowrap" t-field="line.price_total"/></td>
+                </tbody>
+              </table>
+            </t>
+
+        </xpath>
+
+    </template>
+</odoo>

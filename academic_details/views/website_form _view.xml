@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="menu_students_details2" model="website.menu">
+        <field name="name">Student Details</field>
+        <field name="url">/student_webform</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">55</field>
+    </record>
+
+    <template id="icons_header" name="Header Sample" inherit_id="portal.frontend_layout">
+			<xpath expr="//header" position="replace">
+				<link rel="stylesheet" type="text/css"  href="/academic_details/static/src/css/website_style.css"/>
+						<nav class="navbar navbar-inverse">
+						  <div class="container">
+							<div class="navbar-header">
+								<img src="https://topvision.odoo-cloud.nl/web/image/website/1/logo/Top%20Vision%20Instore?unique=70e6341" style="width:130px"/>
+<!--									<a class="navbar-brand text-dark" href="#" data-toggle="dropdown" >products for retails</a>-->
+									<a class="navbar-brand text-danger" href="#" id="servicesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">products for retails</a>
+									<a class="navbar-brand text-dark" href="#">architect and designer</a>
+									<a class="navbar-brand text-dark" href="#">retail story</a>
+									<a class="navbar-brand text-dark" href="#">about us</a>
+									<a class="navbar-brand text-dark" href="#">news and events</a>
+
+									<div class="dropdown-menu h5" aria-labelledby="servicesDropdown">
+
+									<div class="d-md-flex align-items-start justify-content-start left-move">
+
+										<div>
+											  <div class="h4">Carre Instore</div>
+											  <a class="dropdown-item text-muted" target="_blank" rel="noopener noreferrer" href="https://www.w3schools.com/">steel shelving units</a>
+											  <a class="dropdown-item text-muted" href="https://www.google.com/">glass shelving units HC</a>
+											  <a class="dropdown-item text-muted" href="#">lockable column units</a>
+											  <a class="dropdown-item text-muted" href="#">storage units</a>
+											  <a class="dropdown-item text-muted" href="#">island displays</a>
+										</div>
+
+										 <div class="move-left3">
+											  <div class="h3">Wall Columns</div>
+											  <a class="dropdown-item text-muted" href="#">alumina</a>
+											  <a class="dropdown-item text-muted" href="#">mino</a>
+											  <a class="dropdown-item text-muted" href="#">talle</a>
+											 <div class="h4">Frame Holders</div>
+											 <a class="dropdown-item text-muted" href="#">stilo</a>
+										</div>
+
+										<div class="move-left">
+											  <div class="h4">Materials and Design</div>
+											  <a class="dropdown-item text-muted" href="#">colour combinations</a>
+											  <a class="dropdown-item text-muted" href="#">colours and materials</a>
+											  <a class="dropdown-item text-muted" href="#">templates</a>
+											  <div class="h3">Technical information</div>
+											  <a class="dropdown-item text-muted" href="#">colour combinations</a>
+											  <a class="dropdown-item text-muted" href="#">colours and materials</a>
+											  <a class="dropdown-item text-muted" href="#">templates</a>
+										</div>
+										<div class="move-left2">
+											<div class="h4">Featured</div>
+											<img src="https://www.jahnleeye.com/wp-content/uploads/2021/03/img-6775-scaled.jpg"
+												 style="width:250px"/>
+											<a class="dropdown-item text-muted" href="#">Carre</a>
+										</div>
+									</div>
+									</div>
+								</div>
+						  	</div>
+						</nav>
+			</xpath>
+	</template>
+
+<!--    <template id="create_student" name="Students Marklist">-->
+<!--        <t t-call="website.layout">-->
+<!--            <div id="wrap">-->
+<!--                <div class="oe_structure">-->
+<!--                    <div class="container">-->
+<!--                        <form role="form" action="/create/webstudent" method="POST">-->
+<!--                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>-->
+<!--                            <div class="form-group">-->
+<!--                                <label for="name" class="control-label">Your Name</label>-->
+<!--                                <input type="text" name="name" t-att-value="name" id="name"-->
+<!--                                       class="form-control" required="required"/>-->
+<!--                            </div>-->
+<!--                            <div class="form-group">-->
+<!--                                <label for="standard" class="control-label">Standard</label>-->
+<!--                                <input type="text" name="standard" t-att-value="standard" id="standard"-->
+<!--                                       class="form-control" required="required"/>-->
+<!--                            </div>-->
+<!--                            <div class="clearfix oe_login_buttons">-->
+<!--                                <button type="submit" class="btn btn-primary pull-left">Create Student</button>-->
+<!--                            </div>-->
+
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </t>-->
+<!--	-->
+<!--    </template>-->
+
+<!--    <template id="confirmation">-->
+<!--			<t t-call="website.layout">-->
+<!--				<div id="wrap" class="oe_structure oe_empty">-->
+<!--					<section class="mt16 mb128">-->
+<!--						<div class="container">-->
+<!--							<div class="row">-->
+<!--								<div class="col-md-12 text-center mt16 mb32">-->
+<!--									<h2>-->
+<!--										<span style="color:#008000;">-->
+<!--											<strong>Created Successfully!</strong>-->
+<!--										</span>-->
+<!--									</h2>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</section>-->
+<!--				</div>-->
+<!--			</t>-->
+<!--		</template>-->
+</odoo>
